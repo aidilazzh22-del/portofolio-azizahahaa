@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Saya</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- PRELOADER -->
+    <div id="preloader">
+        <div class="loader-logo">A<span>z</span>.</div>
+        <div class="loader-percent"><span id="loaderPercentNum">0</span>%</div>
+        <div class="loader-bar">
+            <div class="loader-bar-fill" id="loaderBarFill"></div>
+        </div>
+        <p class="loader-text">Loading<span class="dots"><span>.</span><span>.</span><span>.</span></span></p>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#beranda" class="logo">Az<span></span></a>
+            
+            <!-- TOMBOL HAMBURGER (MOBILE) -->
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#beranda" class="active"><i class="fas fa-home"></i> <span data-id="Beranda" data-en="Home">Beranda</span></a></li>
+                <li><a href="#tentang"><i class="fas fa-user"></i> <span data-id="Tentang" data-en="About">Tentang</span></a></li>
+                <li><a href="#keahlian"><i class="fas fa-tools"></i> <span data-id="Keahlian" data-en="Skills">Keahlian</span></a></li>
+                <li><a href="#pengalaman"><i class="fas fa-briefcase"></i> <span data-id="Pengalaman" data-en="Experience">Pengalaman</span></a></li>
+                <li><a href="#proyek"><i class="fas fa-tasks"></i> <span data-id="Proyek" data-en="Projects">Proyek</span></a></li>
+                <li><a href="#kontak"><i class="fas fa-envelope"></i> <span data-id="Kontak" data-en="Contact">Kontak</span></a></li>
+            </ul>
+
+            <!-- PEMILIH BAHASA -->
+            <div class="lang-switch" id="langSwitch">
+                <button type="button" class="lang-btn active" data-lang="id">ID</button>
+                <button type="button" class="lang-btn" data-lang="en">EN</button>
+            </div>
+            
+            <!-- TEMA GELAP TERANG -->
+            <button class="theme-toggle" id="themeToggle" title="Ganti Tema">
+                <i class="fas fa-moon"></i>
+            </button>
+
+            <!-- WIDGET MUSIK -->
+            <div class="music-widget" id="musicWidget">
+                <button class="music-btn" id="musicBtn" title="Musik">
+                    <i class="fas fa-music"></i>
+                </button>
+                <div class="music-dropdown" id="musicDropdown">
+                    <div class="music-now-playing">
+                        <div class="music-disc" id="musicDisc"><i class="fas fa-compact-disc"></i></div>
+                        <div class="music-meta"></div>
+                    </div>
+                    <audio id="bgAudio" loop>
+                        <source src="lagu.mp3" type="audio/mpeg">
+                    </audio>
+                    <div class="music-controls">
+                        <button id="musicPlayBtn" class="music-play-btn" title="Putar/Pause">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <input type="range" id="musicVolume" min="0" max="1" step="0.05" value="0.6" title="Volume">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- BERANDA -->
+    <header id="beranda" class="hero-section">
+        <div class="container hero-wrapper">
+            <div class="hero-left reveal reveal-left intro-el">
+                <h3 class="greeting" data-id="HELLO, SAYA" data-en="HELLO, I'M">HELLO, SAYA</h3>
+                <h1 class="main-title">
+                    <span id="typed-name"></span><span class="typing-cursor">|</span>
+                </h1>
+                <h2 class="sub-title" data-id="Mahasiswa Informatika & Calon Web Developer" data-en="Informatics Student & Aspiring UI/UX Designer">Informatics Student & Aspiring UI/UX Designer</h2>
+                
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/cyaazvv" target="_blank" rel="noopener noreferrer" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/6285788199155" target="_blank" rel="noopener noreferrer" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    
+                </div>
+
+                <div class="hero-buttons">
+                    <a href="#proyek" class="btn btn-purple"><i class="fas fa-th-large"></i> <span data-id="Proyek" data-en="Projects">Proyek</span></a>
+                    <a href="#kontak" class="btn btn-outline"><i class="fas fa-envelope"></i> <span data-id="Kontak Saya" data-en="Contact Me">Kontak Saya</span></a>
+                </div>
+            </div>
+
+            <div class="hero-right reveal reveal-drop intro-el">
+                <div class="hang-wrapper">
+                    <div class="lanyard-strap">
+                        <span class="lanyard-text">AZ</span>
+                    </div>
+                    <div class="photo-card glow-frame swing">
+                        <img src="profil.jpg" alt="Profile Image" class="card-img">
+                        <div class="card-overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- TENTANG SAYA -->
+    <section id="tentang" class="section sec-white">
+        <div class="container">
+            <div class="about-card reveal reveal-scale">
+                <div class="about-card-photo">
+                    <img src="profil2.png" alt="Foto Aidil Azizah" onerror="this.onerror=null;this.parentElement.classList.add('photo-missing');this.remove();">
+                </div>
+                <div class="about-card-text">
+                    <h2 class="about-heading">
+                        <span class="about-hi-text" data-id="Hi," data-en="Hello,">Hi,</span>
+                    </h2>
+                    <p class="about-card-intro" data-id="Saya, Aidil Azizah mahasiswa Semester 3 Program Studi Informatika di Universitas Teknokrat Indonesia yang memiliki minat dalam pengembangan website dan teknologi. Saat ini saya terus belajar, mengembangkan keterampilan, dan membangun berbagai proyek untuk menambah pengalaman serta meningkatkan kemampuan di bidang IT." data-en="I am a 3rd Semester Informatics student at Universitas Teknokrat Indonesia with a strong interest in web development and technology. I keep learning, sharpening my skills, and building various projects to grow my experience and IT capabilities.">Saya, Aidil Azizah mahasiswa Semester 3 Program Studi Informatika di Universitas Teknokrat Indonesia yang memiliki minat dalam pengembangan website dan teknologi. Saat ini saya terus belajar, mengembangkan keterampilan, dan membangun berbagai proyek untuk menambah pengalaman serta meningkatkan kemampuan di bidang IT.</p>
+                    <div class="about-role-pill">
+                        <span class="dots"><span></span><span></span><span></span></span>
+                        <span data-id="Informatics Student | Aspiring UI/UX Designer" data-en="Informatics Student | Aspiring UI/UX Designer">Informatics Student | Aspiring UI/UX Designer</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KEAHLIAN -->
+    <section id="keahlian" class="section sec-white border-top">
+        <div class="container">
+            <h2 class="section-title reveal"> <span data-id="Keahlian" data-en="Skills">Keahlian</span></h2>
+        </div>
+        <div class="marquee-container">
+            <div class="marquee-track marquee-left">
+                <div class="skill-tag"><i class="fas fa-palette"></i> Canva</div>
+                <div class="skill-tag"><i class="fab fa-html5" style="color: #e34c26;"></i> HTML5</div>
+                <div class="skill-tag"><i class="fab fa-css3-alt" style="color: #264de4;"></i> CSS3</div>
+                <div class="skill-tag"><i class="fas fa-code"></i> C++</div>
+                <div class="skill-tag"><i class="fas fa-laptop-code"></i> VS Code</div>
+                <div class="skill-tag"><i class="fab fa-js" style="color: #f7df1e;"></i> JavaScript</div>
+                <div class="skill-tag"><i class="fas fa-video"></i> CapCut</div>
+                <!-- Duplikasi -->
+                <div class="skill-tag"><i class="fas fa-palette"></i> Canva</div>
+                <div class="skill-tag"><i class="fab fa-html5" style="color: #e34c26;"></i> HTML5</div>
+                <div class="skill-tag"><i class="fab fa-css3-alt" style="color: #264de4;"></i> CSS3</div>
+                <div class="skill-tag"><i class="fas fa-code"></i> C++</div>
+                <div class="skill-tag"><i class="fas fa-laptop-code"></i> VS Code</div>
+                <div class="skill-tag"><i class="fab fa-js" style="color: #f7df1e;"></i> JavaScript</div>
+                <div class="skill-tag"><i class="fas fa-video"></i> CapCut</div>
+            </div>
+        </div>
+        <div class="marquee-container mt-20">
+            <div class="marquee-track marquee-right">
+                <div class="skill-tag"><i class="fas fa-video"></i> CapCut</div>
+                <div class="skill-tag"><i class="fas fa-laptop-code"></i> VS Code</div>
+                <div class="skill-tag"><i class="fab fa-js" style="color: #f7df1e;"></i> JavaScript</div>
+                <div class="skill-tag"><i class="fas fa-code"></i> C++</div>
+                <div class="skill-tag"><i class="fab fa-css3-alt" style="color: #264de4;"></i> CSS3</div>
+                <div class="skill-tag"><i class="fab fa-html5" style="color: #e34c26;"></i> HTML5</div>
+                <div class="skill-tag"><i class="fas fa-palette"></i> Canva</div>
+                <!-- Duplikasi -->
+                <div class="skill-tag"><i class="fas fa-video"></i> CapCut</div>
+                <div class="skill-tag"><i class="fas fa-laptop-code"></i> VS Code</div>
+                <div class="skill-tag"><i class="fab fa-js" style="color: #f7df1e;"></i> JavaScript</div>
+                <div class="skill-tag"><i class="fas fa-code"></i> C++</div>
+                <div class="skill-tag"><i class="fab fa-css3-alt" style="color: #264de4;"></i> CSS3</div>
+                <div class="skill-tag"><i class="fab fa-html5" style="color: #e34c26;"></i> HTML5</div>
+                <div class="skill-tag"><i class="fas fa-palette"></i> Canva</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PENGALAMAN -->
+    <section id="pengalaman" class="section sec-white">
+        <div class="container">
+            <h2 class="section-title reveal" data-id="Pengalaman" data-en="Experience">Pengalaman</h2>
+            <div class="timeline-v2">
+                <div class="timeline-v2-line"></div>
+                <div class="tl-item tl-right reveal reveal-right">
+                    <div class="tl-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="tl-card">
+                        <span class="tl-date"><i class="far fa-calendar"></i> <span data-id="2025 - Sekarang" data-en="2025 - Present">2025 - Sekarang</span></span>
+                        <h3 data-id="Mahasiswa Aktif & Pengurus Organisasi" data-en="Active Student & Organization Officer">Mahasiswa Aktif & Pengurus Organisasi</h3>
+                        <h4>Universitas Teknokrat Indonesia</h4>
+                        <p data-id="Aktif dalam berbagai organisasi kampus, menjadi pengurus inti pada berbagai kegiatan, mengikuti program Digital Talent Komdigi untuk mengembangkan kompetensi di bidang teknologi, serta meraih 5 Besar Lomba Cipta Puisi di Universitas Negeri Jakarta." data-en="Actively involved in various campus organizations, serving as a core officer in several activities, joining the Komdigi Digital Talent program to develop tech competencies, and reaching the Top 5 in a Poetry Writing Competition at Universitas Negeri Jakarta.">Aktif dalam berbagai organisasi kampus, menjadi pengurus inti pada berbagai kegiatan, mengikuti program Digital Talent Komdigi untuk mengembangkan kompetensi di bidang teknologi, serta meraih 5 Besar Lomba Cipta Puisi di Universitas Negeri Jakarta.</p>
+                        <div class="tl-tags">
+                            <span><i class="fas fa-users"></i> <span data-id="Organisasi" data-en="Organization">Organisasi</span></span>
+                            <span><i class="fas fa-laptop-code"></i> Digital Talent</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="tl-item tl-left reveal reveal-left">
+                    <div class="tl-icon"><i class="fas fa-school"></i></div>
+                    <div class="tl-card">
+                        <span class="tl-date"><i class="far fa-calendar"></i> 2022 - 2023</span>
+                        <h3 data-id="Kerani Putri Pramuka & Bendahara IPSI" data-en="Girl Scout Secretary & IPSI Treasurer">Kerani Putri Pramuka & Bendahara IPSI</h3>
+                        <h4>SMA Negeri 02 Menggala</h4>
+                        <p data-id="Menjadi pengurus inti ekstrakurikuler di SMA sebagai Kerani Putri Pramuka dan Bendahara IPSI, serta aktif dalam pelaksanaan berbagai kegiatan organisasi." data-en="Served as a core extracurricular officer in high school as Girl Scout Secretary and IPSI (Pencak Silat) Treasurer, while actively taking part in organizing various events.">Menjadi pengurus inti ekstrakurikuler di SMA sebagai Kerani Putri Pramuka dan Bendahara IPSI, serta aktif dalam pelaksanaan berbagai kegiatan organisasi.</p>
+                        <div class="tl-tags">
+                            <span><i class="fas fa-flag"></i> Pramuka</span>
+                            <span><i class="fas fa-hand-fist"></i> IPSI</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROYEK -->
+    <section id="proyek" class="section sec-navy">
+        <div class="container">
+            <h2 class="section-title text-white reveal" data-id="Proyek Terbaru" data-en="Latest Projects">Proyek Terbaru</h2>
+            <div class="project-grid">
+                <div class="project-card reveal reveal-up">
+                    <div class="project-img-wrap">
+                        <img src="web.jpeg" alt="Website Portofolio Pribadi" class="project-img" onerror="this.onerror=null;this.parentElement.classList.add('img-missing');this.remove();">
+                    </div>
+                    <div class="project-info">
+                        <h3 data-id="Website Portofolio Pribadi" data-en="Personal Portfolio Website">Website Portofolio Pribadi</h3>
+                        <p data-id="Website portofolio responsif yang dibuat menggunakan HTML, CSS, dan JavaScript untuk menampilkan profil, keterampilan, pengalaman, proyek, dan informasi kontak." data-en="A responsive portfolio website built with HTML, CSS, and JavaScript to showcase profile, skills, experience, projects, and contact information.">Website portofolio responsif yang dibuat menggunakan HTML, CSS, dan JavaScript untuk menampilkan profil, keterampilan, pengalaman, proyek, dan informasi kontak.</p>
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="project-link"><span data-id="Lihat Proyek" data-en="View Project">Lihat Proyek</span> <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="project-card reveal reveal-up">
+                    <div class="project-img-wrap">
+                        <img src="krakatau.jpeg" alt="Krakatau Adventure" class="project-img" onerror="this.onerror=null;this.parentElement.classList.add('img-missing');this.remove();">
+                    </div>
+                    <div class="project-info">
+                        <h3 data-id="Game Petualangan Berbasis Web" data-en="Web-Based Adventure Game">Game Petualangan Berbasis Web</h3>
+                        <p data-id="Game petualangan interaktif berbasis web yang dikembangkan menggunakan HTML, CSS, dan JavaScript dengan konsep eksplorasi dan tantangan sederhana." data-en="An interactive web-based adventure game developed with HTML, CSS, and JavaScript, featuring exploration and simple challenges.">Game petualangan interaktif berbasis web yang dikembangkan menggunakan HTML, CSS, dan JavaScript dengan konsep eksplorasi dan tantangan sederhana.</p>
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="project-link"><span data-id="Lihat Proyek" data-en="View Project">Lihat Proyek</span> <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="project-card reveal reveal-up">
+                    <div class="project-img-wrap">
+                        <img src="mikroblog.jpeg" alt="Creative Microblog" class="project-img" onerror="this.onerror=null;this.parentElement.classList.add('img-missing');this.remove();">
+                    </div>
+                    <div class="project-info">
+                        <h3 data-id="Desain Konten Mikroblog" data-en="Microblog Content Design">Desain Konten Mikroblog</h3>
+                        <p data-id="Kumpulan desain mikroblog informatif menggunakan Canva dengan fokus pada penyampaian informasi yang menarik, kreatif, dan mudah dipahami." data-en="A collection of informative microblog designs made with Canva, focused on delivering information in an engaging, creative, and easy-to-understand way.">Kumpulan desain mikroblog informatif menggunakan Canva dengan fokus pada penyampaian informasi yang menarik, kreatif, dan mudah dipahami.</p>
+                        <a href="https://www.instagram.com/p/DWllnpVFCr2/?img_index=6&igsh=MWQxMmxpNXN1Zm9wbA==" target="_blank" rel="noopener noreferrer" class="project-link"><span data-id="Lihat Proyek" data-en="View Project">Lihat Proyek</span> <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KONTAK -->
+    <section id="kontak" class="section sec-white">
+        <div class="container">
+            <h2 class="section-title reveal" data-id="Hubungi Saya" data-en="Contact Me">Hubungi Saya</h2>
+            <div class="contact-wrapper">
+                <div class="contact-info reveal reveal-left">
+                    <h3 data-id="Mari Bicara tentang Proyek Anda" data-en="Let's Talk About Your Project">Mari Bicara tentang Proyek Anda</h3>
+                    <p data-id="Jika Anda ingin berdiskusi, berkolaborasi, atau memiliki pertanyaan, jangan ragu untuk menghubungi saya melalui formulir atau kontak yang tersedia." data-en="If you'd like to discuss, collaborate, or simply have a question, feel free to reach out through the form or the contact details below.">Jika Anda ingin berdiskusi, berkolaborasi, atau memiliki pertanyaan, jangan ragu untuk menghubungi saya melalui formulir atau kontak yang tersedia.</p>
+                    <div class="info-links">
+                        <a href="mailto:aidilazzh22@gmail.com"><i class="fas fa-envelope"></i> aidilazzh22@gmail.com</a>
+                        <a href="tel:+6285788199155"><i class="fas fa-phone"></i> +62 857 8819 9155</a>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Lampung%2C+Indonesia" target="_blank" rel="noopener noreferrer"><i class="fas fa-map-marker-alt"></i> Lampung, Indonesia</a>
+                    </div>
+                </div>
+                <form class="contact-form reveal reveal-right" id="contactForm">
+                    <input type="text" placeholder="Nama Lengkap" data-id-placeholder="Nama Lengkap" data-en-placeholder="Full Name" required>
+                    <input type="email" placeholder="Email Anda" data-id-placeholder="Email Anda" data-en-placeholder="Your Email" required>
+                    <textarea placeholder="Pesan Anda" data-id-placeholder="Pesan Anda" data-en-placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit" class="btn btn-dark" data-id="Kirim Pesan" data-en="Send Message">Kirim Pesan</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p><span>&copy; 2026 Aidil Azizah.</span> <span data-id="Seluruh hak cipta dilindungi." data-en="All rights reserved.">All rights reserved.</span></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
